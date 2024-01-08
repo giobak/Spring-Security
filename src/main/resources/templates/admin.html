@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" th:href="@{../css/styles.css}">
+</head>
+<body>
+<div class="header">
+    <h1>ADMIN Dashboard</h1>
+
+
+</div>
+<div class="container">
+    <h2>Welcome,
+        th:text="${user.getFullname()}">
+    </h2>
+
+    <span sec:authorize="isAuthenticated">
+            <a th:href="@{/logout}">Logout</a>
+        </span>
+</div>
+
+</body>
+</html>
